@@ -7,28 +7,17 @@ namespace SimpleGunMenuPlugin;
 
 public partial class SimpleGunMenuPlugin : BasePlugin
 {
-    public override string ModuleName => "GunMenuPlugin";
-    public override string ModuleVersion => "0.0.4";
+    public override string ModuleName => "PistolsGunMenu";
+    public override string ModuleVersion => "0.0.1";
     public override string ModuleAuthor => "Constummer";
-    public override string ModuleDescription => "Gun Menu Plugin";
+    public override string ModuleDescription => "Pistols Gun Menu Plugin";
 
     public override void Load(bool hotReload)
     {
     }
-
+    
+    [ConsoleCommand("gun")]
     [ConsoleCommand("guns")]
-    public void Guns(CCSPlayerController? player, CommandInfo info)
-    {
-        if (ValidatePlayer(player) == false)
-        {
-            return;
-        }
-
-        var gunMenu = new ChatMenu("Gun Menu");
-        MenuHelper.GetGuns(gunMenu);
-        ChatMenus.OpenMenu(player, gunMenu);
-    }
-
     [ConsoleCommand("pistols")]
     [ConsoleCommand("secondary")]
     public void Pistols(CCSPlayerController? player, CommandInfo info)
@@ -39,21 +28,7 @@ public partial class SimpleGunMenuPlugin : BasePlugin
         }
 
         var gunMenu = new ChatMenu($"{info.GetCommandString.Split(" ")[0]} Menu");
-        MenuHelper.GetGuns(gunMenu, WeaponType.Secondary);
-        ChatMenus.OpenMenu(player, gunMenu);
-    }
-
-    [ConsoleCommand("rifles")]
-    [ConsoleCommand("primary")]
-    public void Rifles(CCSPlayerController? player, CommandInfo info)
-    {
-        if (ValidatePlayer(player) == false)
-        {
-            return;
-        }
-
-        var gunMenu = new ChatMenu($"{info.GetCommandString.Split(" ")[0]} Menu");
-        MenuHelper.GetGuns(gunMenu, WeaponType.Primary);
+        MenuHelper.GetGuns(gunMenu);
         ChatMenus.OpenMenu(player, gunMenu);
     }
 
