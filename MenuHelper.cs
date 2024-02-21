@@ -17,14 +17,9 @@ public partial class SimpleGunMenuPlugin
             _weaponCheckers = res.WeaponCheckers;
         }
 
-        internal static void GetGuns(ChatMenu gunMenu, WeaponType? type = null)
+        internal static void GetGuns(ChatMenu gunMenu)
         {
             Dictionary<string, Weapon> weapons = _weapons;
-            if (type != null)
-            {
-                weapons = _weapons.Where(x => x.Value.Type == type.Value)
-                                  .ToDictionary(x => x.Key, y => y.Value);
-            }
             foreach (var item in weapons)
             {
                 gunMenu.AddMenuOption(item.Key, GiveSelectedItem);
