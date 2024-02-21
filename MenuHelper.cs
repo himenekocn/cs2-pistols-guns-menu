@@ -51,10 +51,7 @@ public partial class SimpleGunMenuPlugin
                     weapon.Value.DesignerName != "[null]" &&
                     _weaponCheckers.TryGetValue(weapon.Value.DesignerName, out var currentWeapon))
                 {
-                    if (currentWeapon.Type == selectedWeapon.Type)
-                    {
-                        weapon.Value.Remove();
-                    }
+                    weapon.Value.Remove();
                 }
             }
         }
