@@ -27,6 +27,7 @@ public partial class SimpleGunMenuPlugin
                 {"Dual Berettas",                      new("weapon_elite")},
                 {"Five-SeveN",                         new("weapon_fiveseven")},
                 {"R8 Revolver",                        new("weapon_revolver")},
+                {"Desert Eagle",                       new("weapon_deagle")},
             };
 
             ///Duplicates of weapons dictionarys value objects givename property.
@@ -43,6 +44,7 @@ public partial class SimpleGunMenuPlugin
                 {"weapon_fiveseven",                   new("weapon_fiveseven")},
                 {"weapon_elite",                       new("weapon_elite")},
                 {"weapon_revolver",                    new("weapon_revolver")},
+                {"Desert Eagle",                       new("weapon_deagle")},
             };
             return (weapons, weaponCheckers);
         }
