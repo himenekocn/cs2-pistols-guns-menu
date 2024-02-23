@@ -18,16 +18,16 @@ public partial class SimpleGunMenuPlugin
         {
             var weapons = new Dictionary<string, Weapon>(StringComparer.InvariantCultureIgnoreCase)
             {
-                {"Glock-18",                           new("weapon_glock")},
-                {"P2000",                              new("weapon_hkp2000")},
-                {"USP-S",                              new("weapon_usp_silencer")},
-                {"Tec-9",                              new("weapon_tec9")},
-                {"P250",                               new("weapon_p250")},
-                {"CZ75-Auto",                          new("weapon_cz75a")},
-                {"Dual Berettas",                      new("weapon_elite")},
-                {"Five-SeveN",                         new("weapon_fiveseven")},
-                {"R8 Revolver",                        new("weapon_revolver")},
-                {"Desert Eagle",                       new("weapon_deagle")},
+                {"格洛克",                           new("weapon_glock")},
+                {"P2000",                            new("weapon_hkp2000")},
+                {"USP",                              new("weapon_usp_silencer")},
+                {"Tec9",                             new("weapon_tec9")},
+                {"P250",                             new("weapon_p250")},
+                {"CZ75",                             new("weapon_cz75a")},
+                {"双枪",                             new("weapon_elite")},
+                {"FN57",                             new("weapon_fiveseven")},
+                {"R8",                               new("weapon_revolver")},
+                {"沙鹰",                             new("weapon_deagle")},
             };
 
             ///Duplicates of weapons dictionarys value objects givename property.
@@ -44,7 +44,7 @@ public partial class SimpleGunMenuPlugin
                 {"weapon_fiveseven",                   new("weapon_fiveseven")},
                 {"weapon_elite",                       new("weapon_elite")},
                 {"weapon_revolver",                    new("weapon_revolver")},
-                {"Desert Eagle",                       new("weapon_deagle")},
+                {"weapon_deagle",                      new("weapon_deagle")},
             };
             return (weapons, weaponCheckers);
         }
