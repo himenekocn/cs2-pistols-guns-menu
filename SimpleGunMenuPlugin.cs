@@ -28,7 +28,7 @@ public partial class SimpleGunMenuPlugin : BasePlugin
             return;
         }
 
-        var gunMenu = new ChatMenu($"{info.GetCommandString.Split(" ")[0]} Menu");
+        var gunMenu = new ChatMenu($"手枪菜单");
         MenuHelper.GetGuns(gunMenu);
         ChatMenus.OpenMenu(player, gunMenu);
     }
